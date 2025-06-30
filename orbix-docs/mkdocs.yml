@@ -1,0 +1,30 @@
+site_name: Orbix Docs
+markdown_extensions:
+  - tables
+  - attr_list
+plugins:
+  - search
+  - glightbox
+nav:
+  - Home: index.md
+  - Getting Started:
+    - Overview: getting-started/index.md
+    - What is Orbix?: getting-started/what-is-orbix.md
+    - Logging In & Your Dashboard: getting-started/logging-in-dashboard.md
+    - Inspection Workflow: getting-started/inspection-workflow.md
+  - Core Workflows:
+    - Overview: core-workflows/index.md
+    - Uploading & Submitting Data: core-workflows/upload-submit-data.md
+    - Navigating & Managing Data: core-workflows/navigating-managing-data.md
+    - Auditing Workflow: core-workflows/auditing-workflow.md
+  - Core Tools:
+    - Overview: core-tools/index.md
+    - RT Viewer: core-tools/rt-viewer.md
+    - Data Integrity System: core-tools/data-integrity-system.md
+    - Compliance Hub: core-tools/compliance-hub.md
+    - Alerts & Notifications: core-tools/alerts-notifications.md
+    - Certifications: core-tools/certifications.md
+  - Admin:
+    - Overview: admin/index.md
+    - Project Management: admin/project-management.md
+    - System Administration: admin/system-administration.md
