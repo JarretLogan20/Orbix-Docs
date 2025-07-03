@@ -106,11 +106,109 @@ Adopting consistent practices for data organization and naming enhances efficien
 
 ### 2.2.3.1 Overview
 
+Real-time upload is the preferred method for integrating DICONDE data into Orbix when immediate processing and review of individual shots are critical. This method is ideal for ongoing inspections where you need to continuously feed data as it is acquired.
+
+Use real-time upload when:
+
+* You require immediate access to newly acquired RT shots: For instance, during an active inspection where images are being generated continuously, real-time upload ensures that each DICONDE file is sent to Orbix as soon as it is available. This enables prompt review and analysis by the relevant personnel.
+
+* You are working with a direct integration from your RT equipment: Many modern RT systems can be configured to automatically transmit DICONDE files to a designated server or application as they are produced. Orbix can be set up to receive these files in real-time, streamlining your workflow.
+
+* You need to verify data integrity shot-by-shot: Real-time uploads allow for the immediate validation of each DICONDE file, ensuring that the data and its associated metadata are correctly captured and transferred to the Main Data Manager within Orbix.
+
+* Your operational setup benefits from continuous data flow: Environments that emphasize lean processes and just-in-time data availability will benefit significantly from real-time DICONDE uploads, reducing potential bottlenecks in data transfer and processing.
+
+The Main Data Manager in Orbix will then automatically process these incoming DICONDE files, associating them with the correct Inspection ID.
+
 ### 2.1.3.2 Submitting Data & Decisions
 
 ### 2.1.3.3 Mapping Repairs
 
 ## 2.1.4 Non-RT Method: Uploading to the Compliance Hub
+### **2.1.4 Non-RT Method: Uploading to the Compliance Hub**
+
+In addition to managing real-time and batch Radiographic Testing (RT) workflows with **DICONDE** files in the **Main Data Manager**, the Orbix platform enables the submission of other NDT methods through the **Compliance Hub**. The **Compliance Hub** is an intelligent repository where your data is mapped directly to your project and the underlying **Inspection ID**. It acts as a centralized hub for all your inspection information, data, and project documentation, providing robust version control, validation, action traceability, and a complete decision history.
+
+#### **2.1.4.1 What it's for**
+
+The **Compliance Hub** is designed for submitting inspection data and reports for a variety of NDT methods, including:
+
+* Magnetic Particle Testing (MT)
+* Penetrant Testing (PT)
+* Ultrasonic Testing (UT)
+* Visual Testing (VT)
+* Acoustic Emission Testing (AET)
+* Eddy Current Testing (ECT)
+
+Beyond raw inspection data, the **Compliance Hub** is the designated location for all project documentation. This allows you to store and manage critical files like end-user specifications, service company procedures, personnel qualification records (PQRs), and final examination reports. Each uploaded file is mapped directly to your project, ensuring a complete, traceable, and auditable record.
+
+#### **2.1.4.2 Accessing the Compliance Hub**
+
+To navigate to the **Compliance Hub** for your project:
+
+1.  From the main dashboard, navigate to the **Projects Page**.
+2.  Locate the desired project in the list.
+3.  In the **Actions** column for that project, click the **Compliance Hub** icon, which is represented by a stack of papers.
+
+<br>
+
+> **[Screenshot]**
+>
+> **Image Description:** The **Projects Page** in Orbix. A list of projects is shown in a table. The mouse cursor is highlighting the **Compliance Hub** icon (a stack of papers) in the **Actions** column for a specific project.
+
+<br>
+
+This action will open the project-specific **Compliance Hub**, where you can begin managing your files.
+
+#### **2.1.4.3 Recommended Folder Structure**
+
+An organized folder structure is essential for maintaining data integrity and accessibility. You can create folders in a way that best suits your project workflow. For optimal organization, we recommend the following practices:
+
+* **Create one folder per NDT Method:** Establish separate folders for MT, PT, UT, etc., to keep inspection data clearly segregated.
+* **Organize by Document Type:** Create folders for `Specifications`, `Procedures`, and `Examination Reports` to keep them separate from raw inspection data.
+* **Create folders per Technician:** On larger projects, organizing folders by the responsible technician can help streamline reviews and tracking.
+
+<br>
+
+> **[Screenshot]**
+>
+> **Image Description:** The main folder view within the **Compliance Hub**. Several folders are displayed, demonstrating a best-practice structure. Folder names include `MT - Magnetic Particle`, `PT - Penetrant Testing`, `Procedures`, and `Specifications`. The **New Folder** button is visible in the top right.
+
+<br>
+
+#### **2.1.4.4 Step-by-Step: Uploading Files**
+
+Follow these steps to create folders and upload your inspection files.
+
+**1. Create a Folder:**
+
+1.  Click the **New Folder** button.
+2.  In the dialog box, enter a descriptive folder name.
+3.  Select a **Folder Type** from the dropdown menu:
+    * **Inspection Data:** Choose this for uploading data from NDT methods like VT, PT, MT, and ECT.
+    * **Documents and Reports:** Choose this for supplementary project files such as specifications, procedures, reports, PDFs, and spreadsheets.
+4.  Click **Create**.
+
+[Screenshot: The 'New Folder' dialog box, highlighting the 'Folder Type' dropdown menu which shows 'Inspection Data' and 'Documents and Reports'.]
+
+**2. Upload Inspection Files:**
+
+1.  Navigate into the folder you created.
+2.  Drag and drop your files (e.g., PDFs, images, documents) directly into the main window to upload them.
+
+**3. Manage Uploaded Files:**
+
+Once a file is uploaded, you can access management options by clicking the three-dot icon on the right of the file name.
+
+[Screenshot: A file shown in the Compliance Hub with the three-dot action menu open, highlighting the list of options: Review, Details, Download, Rename, and Edit.]
+
+* **Review:** Allows auditors and other stakeholders to provide traceable feedback, flag samples, and agree or disagree with field decisions. All review activity is stored with the data.
+* **Details:** Displays file metadata, including file type, size, who uploaded it, and when. It also contains a complete, time-stamped activity log for that specific file.
+* **Download:** Downloads a copy of the file to your local system.
+* **Rename:** Allows you to change the file name.
+* **Edit:** Provides options to modify file information.
+
+All data within the **Compliance Hub** can be easily downloaded, reviewed, and tracked, providing a complete database of all activity related to your project's inspection data.
 
 ### 2.1.4.1 What it's for
 
