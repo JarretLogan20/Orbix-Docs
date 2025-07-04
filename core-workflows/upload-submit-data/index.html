@@ -165,32 +165,23 @@
     <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
         <ul class="nav flex-column">
             
-            <li class="nav-item" data-bs-level="1"><a href="#21-uploading-submitting-data" class="nav-link">2.1 Uploading &amp; Submitting Data</a>
-              <ul class="nav flex-column">
-            <li class="nav-item" data-bs-level="2"><a href="#211-understanding-data-types-in-orbix" class="nav-link">2.1.1 Understanding Data Types in Orbix</a>
+            <li class="nav-item" data-bs-level="2"><a href="#21-uploading-submitting-data" class="nav-link">2.1 Uploading &amp; Submitting Data</a>
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-bs-level="2"><a href="#212-rt-method-1-batch-upload-diconde" class="nav-link">2.1.2 RT Method 1: Batch Upload (DICONDE)</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-bs-level="2"><a href="#213-rt-method-2-real-time-upload-diconde" class="nav-link">2.1.3 RT Method 2: Real-Time Upload (DICONDE)</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
+            
             <li class="nav-item" data-bs-level="2"><a href="#214-non-rt-method-uploading-to-the-compliance-hub" class="nav-link">2.1.4 Non-RT Method: Uploading to the Compliance Hub</a>
               <ul class="nav flex-column">
               </ul>
             </li>
+            
             <li class="nav-item" data-bs-level="2"><a href="#215-editing-uploaded-rt-inspection-data" class="nav-link">2.1.5 Editing Uploaded RT Inspection Data</a>
               <ul class="nav flex-column">
               </ul>
             </li>
+            
             <li class="nav-item" data-bs-level="2"><a href="#216-rt-interoperability-guides-faqs" class="nav-link">2.1.6 RT Interoperability Guides &amp; FAQs</a>
               <ul class="nav flex-column">
-              </ul>
-            </li>
               </ul>
             </li>
         </ul>
@@ -198,130 +189,102 @@
 </div></div>
                     <div class="col-md-9" role="main">
 
-<h1 id="21-uploading-submitting-data">2.1 Uploading &amp; Submitting Data</h1>
-<h2 id="211-understanding-data-types-in-orbix">2.1.1 Understanding Data Types in Orbix</h2>
-<p>Orbix primarily utilizes the DICONDE (Digital Imaging and COmmunications in Non-Destructive Evaluation) standard for managing all RT data. DICONDE is an extension of the DICOM (Digital Imaging and COmmunications in Medicine) standard, tailored specifically for NDT applications. This ensures comprehensive, standardized storage of RT images and associated metadata.</p>
-<p>When you perform an RT inspection using Orbix, all acquired images, along with critical inspection parameters, technician details, and part information, are encapsulated within the DICONDE file format. This integration ensures data integrity and traceability.</p>
-<p>To access RT data within Orbix:</p>
-<pre><code>1. Navigate to the Main Data Manager.
-
-2. Locate the relevant Inspection ID.
-
-3. Click "View" button to open the inspection details. You will find all associated DICONDE files with the selected Weld ID.
-</code></pre>
-<p><a class="glightbox" href="../../assets/main-data-manager.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Main-data-manager" src="../../assets/main-data-manager.png" style="width:475px" /></a> <a class="glightbox" href="../../assets/dicom-data.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="dicom-data" src="../../assets/dicom-data.png" style="height:300px" /></a></p>
-<h3 id="why-diconde-matters">Why DICONDE Matters</h3>
-<p>The Digital Imaging and Communication in Non-Destructive Evaluation (DICONDE) standard is a pivotal framework in the world of Non-Destructive Testing (NDT). It extends the DICOM standard, widely recognized in medical imaging, to NDT applications, ensuring that data from various inspection methods can be universally accessed, shared, and stored. DICONDE files, identifiable by their .dcm extension, encapsulate both the visual data from inspections (such as images) and vital metadata. This standardization is crucial for maintaining data integrity, ensuring compatibility across different equipment, and facilitating secure and reliable storage and analysis.</p>
+<h2 id="21-uploading-submitting-data"><strong>2.1 Uploading &amp; Submitting Data</strong></h2>
+<p>The Orbix platform provides clear and flexible workflows for submitting all NDT project data. This section details the primary methods for uploading your inspection information, whether you are submitting Radiographic Testing (RT) data through our structured <strong>DICONDE</strong> workflows or managing other NDT methods and project files through the <strong>Compliance Hub</strong>.</p>
+<h3 id="211-understanding-data-types-in-orbix"><strong>2.1.1 Understanding Data Types in Orbix</strong></h3>
+<p>The Orbix platform is designed to handle various digital inspection workflows. It's key to understand the main data formats and how they are managed within the system.</p>
 <ul>
 <li>
-<p><strong><code>Universal Compatibility</code></strong>: DICONDE ensures seamless data sharing across all NDT systems, eliminating the need for custom solutions and enhancing workflow efficiency. Using DICONDE guarantees your data is saved in a universal format, preventing vendor lock-in.</p>
+<p><strong>Radiographic Data (DICONDE):</strong> In our platform, radiographic data is typically supported through the <strong>DICONDE</strong> format. These are <code>.dcm</code> files that ensure the interoperable submission and transmission of RT data. You can submit this data using two dedicated workflows: <strong>Batch Uploads</strong> or continuous <strong>Real-Time</strong> submissions throughout the day.</p>
 </li>
 <li>
-<p><strong><code>Data Integrity</code></strong>: DICONDE rigorously maintains the integrity of inspection data, encompassing both images and their associated metadata. This means the data remains complete and unchanged from capture through final analysis.</p>
-</li>
-<li>
-<p><strong><code>Efficient Data Management and Analysis</code></strong>: DICONDE simplifies data processing with a standardized format, enabling straightforward management and advanced analysis on platforms like Orbix.</p>
-</li>
-<li>
-<p><strong><code>Optimized Storage and Retrieval</code></strong>: DICONDE improves how NDT data is organized and accessed, allowing for quick retrieval of vast amounts of information via secure and reliable specialized data servers.</p>
+<p><strong>Other Supported Formats:</strong> We also support other NDT methods, including VT, UT (HDF5), Eddy Current, and Acoustic Emissions. Data for these methods, along with all standard file formats like PDFs, JPEGs, PNGs, Excel files, .csv files, and TIFs, is uploaded and managed through the <strong>Compliance Hub</strong>.</p>
 </li>
 </ul>
-<p>DICONDE standardization is pivotal for enhancing the efficiency, reliability, and scalability of NDT data handling processes.</p>
-<h3 id="standard-file-formats-for-other-ndt-methods-via-the-compliance-hub">Standard File Formats for Other NDT Methods via the Compliance Hub</h3>
-<p>While Orbix handles RT data in DICONDE, the Compliance Hub serves as a central repository for documentation and reports generated by other NDT methods. This includes a wide array of standard file formats, ensuring that all inspection-related information is accessible from a single, unified location.</p>
-<p>The Compliance Hub supports commonly used file formats, enabling a comprehensive overview of an asset's inspection history, regardless of the NDT method employed.</p>
-<p>Common file formats you will encounter in the Compliance Hub include:</p>
-<ul>
-<li>
-<p><strong><code>PDF (Portable Document Format)</code></strong>: Widely used for reports, certifications, and procedure documents due to its universal compatibility and preservation of formatting.</p>
-</li>
-<li>
-<p><strong><code>JPG/JPEG (Joint Photographic Experts Group)</code></strong>: Often used for visual documentation, such as photographs of surface indications from Visual Testing (VT) or Magnetic Particle Testing (MT).</p>
-</li>
-<li>
-<p><strong><code>PNG (Portable Network Graphics)</code></strong>: Similar to JPG, PNG offers lossless compression and supports transparency, making it suitable for diagrams or images requiring higher fidelity.</p>
-</li>
-<li>
-<p><strong><code>TIFF (Tagged Image File Format)</code></strong>: Frequently used for high-resolution images, particularly in cases where image quality is paramount for detailed analysis.</p>
-</li>
-<li>
-<p><strong><code>DOCX/XLSX (Microsoft Word/Excel Documents)</code></strong>: Used for written reports, data sheets, and analytical summaries.</p>
-</li>
-</ul>
-<p>To access these files via the Compliance Hub:</p>
-<pre><code>1. Locate the company and project for the desired compliance hub.
-
-2. "Click" compliance hub icon on project
-
-3. Navigate to the appropriate folder to view and open the files.
-</code></pre>
-<p><a class="glightbox" href="../../assets/orbix-compliance-hub.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="orbix-compliance-hub" src="../../assets/orbix-compliance-hub.png" /></a></p>
-<p>By consolidating both DICONDE files for RT within Orbix and standard file formats for other NDT methods via the Compliance Hub, you maintain a complete and easily retrievable inspection record for all your assets.</p>
-<h2 id="212-rt-method-1-batch-upload-diconde">2.1.2 RT Method 1: Batch Upload (DICONDE)</h2>
-<h3 id="2121-preparing-data-for-batch-upload">2.1.2.1 Preparing Data for Batch Upload</h3>
-<p>To ensure efficient and accurate data ingestion into Orbix, organize your DICONDE files within a structured folder hierarchy. This method simplifies the batch upload process, especially when managing multiple Inspection IDs.</p>
-<p>The recommended folder structure is as follows:</p>
-<ul>
-<li>
-<p><strong><code>Batch Folders</code></strong>: These folders aggregate data by date or readersheet. You will drag and drop these folders into Orbix.</p>
-<ul>
-<li>
-<p><strong><code>Inspection Folders</code></strong>: Within each batch folder, create individual folders for each weld or Inspection ID.</p>
-<ul>
-<li><strong><code>DICONDE Files</code></strong>: Inside each inspection folder, place the individual DICONDE files (shots or views). These files, typically with a <code>.dcm</code> or <code>.DCM</code> extension (e.g., <code>shot1.DCM</code>), store detailed inspection data and critical metadata.</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<p>To submit a batch of two or more inspections simultaneously, place multiple inspection folders into one parent batch folder. Then, drag and drop this batch folder into the Orbix add data screen.
-<a class="glightbox" href="../../assets/batch-folder-structure.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="batch-folder-structure" src="../../assets/batch-folder-structure.jpg" style="height:250px" /></a></p>
-<p>Follow these steps to upload your organized DICONDE data into Orbix:</p>
+<p>For detailed instructions on submitting these formats, please see the article: <em>Section 2.1.4 Non-RT Method: Uploading to the Compliance Hub</em>.</p>
+<h3 id="212-rt-method-1-batch-upload"><strong>2.1.2 RT Method 1: Batch Upload</strong></h3>
+<p>The Batch Upload method is ideal for submitting a large volume of inspection data at one time, such as at the end of a shift or a full day's work. This method allows you to upload an entire set of <strong>DICONDE</strong> files along with their corresponding examination report in a single operation.</p>
+<h4 id="2121-critical-preparing-data-for-batch-upload"><strong>2.1.2.1 (CRITICAL) Preparing Data for Batch Upload</strong></h4>
+<p>A precise folder structure is <strong>essential</strong> for a successful batch upload. Orbix uses this structure to automatically read and organize your data. Before uploading, arrange your files on your local machine exactly as follows:</p>
 <ol>
-<li>
-<p>Organize Data: Ensure your DICONDE files are organized in individual inspection folders or within a batch folder containing multiple inspection folders as described above.</p>
-</li>
-<li>
-<p>Drag and Drop: The Orbix platform allows you to upload your organized data by simply dragging and dropping the batch folder (or single inspection folder) onto the designated area within the add data screen.</p>
-</li>
-<li>
-<p>Include Your Readersheet: Accompanying your upload with a readersheet ensures accurate data cataloging within the Main Data Manager and links the DICONDE images to the correct Inspection ID.</p>
-</li>
+<li>Create a single parent folder (e.g., <code>ProjectName_YYYY-MM-DD</code>). (You can use anyname you like.)</li>
+<li>Inside the parent folder, create a separate subfolder for <strong>each unique Inspection ID</strong>. Name the subfolder with the exact <strong>Inspection ID</strong>.</li>
+<li>Place all <strong>DICONDE</strong> files (<code>.dcm or.DCM</code>) corresponding to a single inspection inside its respective <strong>Inspection ID</strong> subfolder.</li>
 </ol>
-<p><a class="glightbox" href="../../assets/orbix-add-data-batch.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="orbix-add-data-batch" src="../../assets/orbix-add-data-batch.png" style="height:300px" /></a></p>
-<h3 id="2122-best-practices-for-file-naming">2.1.2.2 Best Practices for File Naming</h3>
-<p>Efficient Data Management Tips</p>
-<p>Adopting consistent practices for data organization and naming enhances efficiency and simplifies retrieval through the <strong><code>Main Data Manager</code></strong> and Compliance Hub.  </p>
-<ul>
-<li>
-<p><strong><code>Adopt Consistent Naming Conventions</code></strong>: You can use any naming convention you prefer, but we recommend using dates for batch folders (e.g., <code>2024-06-30_Batch1</code>) and specific <strong><code>Inspection IDs</code></strong> or <strong><code>weld IDs</code></strong> for the inspection folders (e.g., <code>Weld_A-001</code>, <code>Inspection_ID_456</code>). With the automatic ID generation feature the folder name is used as the Weld ID, so having these consistent naming practices of using Weld ID as the folder name will decrease time taken to upload files.</p>
+<p><strong>Example Structure:</strong></p>
+<pre><code>Batch_Upload_2025-07-03/
+├── WELD_001/
+│   ├── Shot_01.dcm
+│   └── Shot_02.dcm
+└── WELD_002/
+    └── Shot_01.dcm
+</code></pre>
+<p>[Screenshot: A diagram or file explorer view illustrating the correct parent folder containing multiple 'Inspection_ID' subfolders, each with .dcm files inside.]</p>
+<p>Adhering to this structure is the most critical step to ensure your data is processed correctly.</p>
+<h4 id="2122-best-practices-for-file-naming"><strong>2.1.2.2 Best Practices for File Naming</strong></h4>
+<p>While the folder structure is the primary method for organization, consistent file naming is a best practice. If your workflow does not assign specific names, a simple convention like <code>Shot_01.dcm</code>, <code>Shot_02.dcm</code>, etc., within each <strong>Inspection ID</strong> folder is recommended.</p>
+<p>For advanced workflows, Orbix can use the "Trusted Data" option, which relies on the embedded Study, Series, and Instance tags within the <strong>DICONDE</strong> files themselves. However, when in doubt, always default to the <strong>Folder Structure</strong> method.</p>
+<h4 id="2123-step-by-step-guide"><strong>2.1.2.3 Step-by-Step Guide</strong></h4>
+<p>To perform a batch upload:</p>
+<ol>
+<li>Navigate to the upload screen. You can do this in two ways:<ul>
+<li>From the <strong>Projects</strong> page, find your project and click the <strong>Add Data</strong> action icon.</li>
+<li>Navigate into your project's <strong>Main Data Manager</strong> and click the <strong>Add Data</strong> button.</li>
+</ul>
 </li>
-<li>
-<p><strong><code>Save Your Inspection Data in Folders as You Go</code></strong>: As you complete inspections throughout the day, save the DICONDE data into their respective inspection folders. This practice allows you to easily perform a batch upload at the end of the day, streamlining your workflow.</p>
+<li>You will be directed to the <strong>Batch Upload</strong> page.</li>
+<li>Complete the required fields:<ul>
+<li><strong>Technician:</strong> Select the technician who performed the inspection.</li>
+<li><strong>Inspection Date:</strong> Select the date from the examination report.</li>
+<li><strong>RT Report:</strong> Drag and drop or browse to upload the corresponding examination report (e.g., PDF).</li>
+<li><strong>Data Template:</strong> Select the option that matches your data preparation.<ul>
+<li>If your specific inspection equipment is listed, select it.</li>
+<li>Otherwise, select <strong>Folder Structure</strong>.</li>
+</ul>
 </li>
 </ul>
-<h3 id="2123-step-by-step-guide">2.1.2.3 Step-by-Step Guide</h3>
-<h2 id="213-rt-method-2-real-time-upload-diconde">2.1.3 RT Method 2: Real-Time Upload (DICONDE)</h2>
-<h3 id="2231-overview">2.2.3.1 Overview</h3>
-<p>Real-time upload is the preferred method for integrating DICONDE data into Orbix when immediate processing and review of individual shots are critical. This method is ideal for ongoing inspections where you need to continuously feed data as it is acquired.</p>
-<p>Use real-time upload when:</p>
-<ul>
-<li>
-<p>You require immediate access to newly acquired RT shots: For instance, during an active inspection where images are being generated continuously, real-time upload ensures that each DICONDE file is sent to Orbix as soon as it is available. This enables prompt review and analysis by the relevant personnel.</p>
 </li>
-<li>
-<p>You are working with a direct integration from your RT equipment: Many modern RT systems can be configured to automatically transmit DICONDE files to a designated server or application as they are produced. Orbix can be set up to receive these files in real-time, streamlining your workflow.</p>
-</li>
-<li>
-<p>You need to verify data integrity shot-by-shot: Real-time uploads allow for the immediate validation of each DICONDE file, ensuring that the data and its associated metadata are correctly captured and transferred to the Main Data Manager within Orbix.</p>
-</li>
-<li>
-<p>Your operational setup benefits from continuous data flow: Environments that emphasize lean processes and just-in-time data availability will benefit significantly from real-time DICONDE uploads, reducing potential bottlenecks in data transfer and processing.</p>
-</li>
-</ul>
-<p>The Main Data Manager in Orbix will then automatically process these incoming DICONDE files, associating them with the correct Inspection ID.</p>
-<h3 id="2132-submitting-data-decisions">2.1.3.2 Submitting Data &amp; Decisions</h3>
-<h3 id="2133-mapping-repairs">2.1.3.3 Mapping Repairs</h3>
+<li>Drag and drop your single parent folder (containing all the <strong>Inspection ID</strong> subfolders) into the designated upload area.</li>
+<li>Click <strong>Submit</strong>. Orbix will begin processing the batch.</li>
+</ol>
+<p>[Screenshot: The 'Batch Upload' page with fields for Technician, Date, and Data Template highlighted, and an arrow pointing to the drag-and-drop area.]</p>
+<p><strong>Note:</strong> If your total batch upload size exceeds two terabytes (2 TB), you must first compress the parent folder into a single .zip file before uploading.</p>
+<h3 id="213-rt-method-2-real-time-upload"><strong>2.1.3 RT Method 2: Real-Time Upload</strong></h3>
+<h4 id="2131-overview"><strong>2.1.3.1 Overview</strong></h4>
+<p>The Real-Time Upload method is designed for workflows where inspection data must be submitted continuously for immediate review by remote auditors or inspectors. This provides a live feed of inspection progress and allows for rapid feedback cycles. Use this method when immediate submission is required, as opposed to end-of-day batching.</p>
+<h4 id="2132-submitting-data-decisions"><strong>2.1.3.2 Submitting Data &amp; Decisions</strong></h4>
+<p>To submit an inspection in real-time:</p>
+<ol>
+<li>From the <strong>Main Data Manager</strong>, navigate to the <strong>Add Data</strong> screen and select the <strong>Real-Time</strong> tab.</li>
+<li>Select the <strong>Technician(s)</strong> for the job.</li>
+<li>Enter a unique <strong>Inspection ID</strong> for the component being inspected.</li>
+<li>Drag and drop the corresponding <strong>DICONDE</strong> file(s) for that <strong>Inspection ID</strong> into the upload area.</li>
+<li>Click <strong>Save and Continue</strong>.</li>
+</ol>
+<p>The inspection is immediately submitted to the system. You can track the status of all submissions (Pending, Accepted, Rejected) in the real-time dashboard. For more information, please see the article: <em>Understanding the Real-Time Submission Dashboard</em>.</p>
+<p>[Screenshot: The 'Real-Time' upload tab, showing fields for Technician, Inspection ID, and the file drop zone.]</p>
+<h4 id="2133-mapping-repairs"><strong>2.1.3.3 Mapping Repairs</strong></h4>
+<p>When an inspection is rejected, you must link the new repair data to the original inspection to maintain a complete and traceable record. Orbix provides two methods to accomplish this.</p>
+<p><strong>Method 1: From the Main Data Manager</strong></p>
+<p>Use this method to add repair data to an existing rejected inspection.</p>
+<ol>
+<li>Navigate to the <strong>Main Data Manager</strong>.</li>
+<li>Locate the rejected <strong>Inspection ID</strong> that has been repaired.</li>
+<li>Click the <strong>More Options</strong> icon (three dots) in the <strong>Actions</strong> column for that inspection.</li>
+<li>From the menu, select <strong>Edit Inspection</strong>.</li>
+<li>In the <strong>Edit Inspection</strong> window, drag and drop the new <strong>DICONDE</strong> file for the repair into the designated repair upload box.</li>
+</ol>
+<p>[Screenshot: The 'Edit Inspection' view, highlighting the drag-and-drop area for repair data.]</p>
+<p><strong>Method 2: During Real-Time Upload</strong></p>
+<p>Use this method when submitting a new inspection that you know is a repair for a previously rejected item.</p>
+<ol>
+<li>Navigate to the <strong>Real-Time</strong> upload tab.</li>
+<li>As you fill out the submission details, locate the <strong>Repair</strong> dropdown menu.</li>
+<li>Click the dropdown to see a list of rejected <strong>Inspection IDs</strong>.</li>
+<li>Select the rejected <strong>Inspection ID</strong> to which this repair corresponds.</li>
+<li>Upload your new inspection data as usual. The link will be created automatically upon submission.</li>
+</ol>
+<p>[Screenshot: The 'Real-Time' upload interface with the 'Repair' dropdown menu expanded to show a list of rejected Inspection IDs.]</p>
 <h2 id="214-non-rt-method-uploading-to-the-compliance-hub">2.1.4 Non-RT Method: Uploading to the Compliance Hub</h2>
 <h3 id="214-non-rt-method-uploading-to-the-compliance-hub_1"><strong>2.1.4 Non-RT Method: Uploading to the Compliance Hub</strong></h3>
 <p>In addition to managing real-time and batch Radiographic Testing (RT) workflows with <strong>DICONDE</strong> files in the <strong>Main Data Manager</strong>, the Orbix platform enables the submission of other NDT methods through the <strong>Compliance Hub</strong>. The <strong>Compliance Hub</strong> is an intelligent repository where your data is mapped directly to your project and the underlying <strong>Inspection ID</strong>. It acts as a centralized hub for all your inspection information, data, and project documentation, providing robust version control, validation, action traceability, and a complete decision history.</p>
