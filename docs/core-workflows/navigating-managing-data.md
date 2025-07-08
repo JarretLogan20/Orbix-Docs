@@ -1,10 +1,10 @@
-# Navigating & Managing Data
+# 2.2 Navigating & Managing Data
 
-## The Projects Page: Your Central Hub
+## 2.2.1 The Projects Page: Your Central Hub
 The Projects page in Orbix serves as your central repository for all projects associated with your company. This dashboard provides a comprehensive overview of each project, displaying critical information and enabling various actions.
 
 
-### Understanding the Project Table
+### 2.2.1.1 Understanding the Project Table
 ![orbix-project-dashboard](../assets/orbix-project-dashboard.png){: style="width:475px"}
 
 | Number | Name | Function | Component |
@@ -19,7 +19,7 @@ The Projects page in Orbix serves as your central repository for all projects as
 | 8 | Status Column | Shows the current status of the project | ![project-status-column](../assets/project-status-column.png) |
 | 9 | Action Column | Shows the user the actions that they are able to perform on a certain project | ![project-action-column](../assets/project-action-column.png) |
 
-### Project Action Icons
+### 2.2.1.2 Project Action Icons
 From the Projects page, you can perform several critical actions to manage your projects effectively:
 
 | Action | Function | Component |
@@ -44,6 +44,8 @@ The **Main Data Manager** is your primary interface within Orbix for interacting
 
 The **Main Data Manager** is designed for efficient data navigation and management. The interface is centered around three main components: a comprehensive search bar for granular queries, intuitive filters for batch searching, and a detailed data table that lists every weld.
 
+![orbix-main-data-manager-dashboard](../assets/orbix-main-data-manager-dashboard.png){: style="height: 300px"}
+
 [Screenshot: The Main Data Manager interface showing the search bar, filters, and the main data table.]
 
 ***
@@ -62,6 +64,8 @@ The data table lists each individual weld as a unique row, providing critical in
 * **Audit Status:** The final finding as determined by the auditor. This column allows you to directly compare the initial technician finding with the final audit decision.
 * **Actions:** A menu of available operations for each weld.
 
+![orbix-main-data-manager-table](../assets/orbix-main-data-manager-table.png){: style="height: 300px"}
+
 [Screenshot: The Main Data Manager data table with columns like Inspection Status, Audit Status, and the clickable ID and Radiographer cells highlighted.]
 
 ***
@@ -74,6 +78,8 @@ Locating specific data within a large project is simple with the **Main Data Man
 
 Use the main search bar to perform a **Comprehensive Search** across any field in the data table. You can instantly find data by **Inspection ID**, **Weld ID**, radiographer name, or even a specific filename associated with the **DICONDE** data. Simply type your query into the search bar and the table will update in real-time.
 
+![main-data-manager-comprehensive-search](../assets/main-data-manager-comprehensive-search.jpg){: style="height:300px"}
+
 #### Search by Batch
 
 To find all data associated with a specific upload, use the intuitive **Search by Batch** dropdown filters.
@@ -81,6 +87,9 @@ To find all data associated with a specific upload, use the intuitive **Search b
 1.  Select a **Date** or **Technician** from the dropdown menus.
 2.  The data table will display every weld included in the selected batch.
 3.  After selecting a batch, an **Edit** icon appears next to the filter. Click this icon to navigate to the manage data page for that batch, where you can upload additional **DICONDE** files or reader sheets.
+
+
+![main-data-manager-batch-search](../assets/main-data-manager-batch-search.jpg){: style="height: 300px"}
 
 ***
 
@@ -96,10 +105,3 @@ From the **Actions** column on any given row, you can:
 * **Download Single Weld:** Download the complete data package for a single **Inspection ID**.
 * **Delete Weld:** Remove the weld record from the project.
 
-### Interface Overview
-
-### Understanding the Data Table
-
-### Powerful Search Tools
-
-### Actions
