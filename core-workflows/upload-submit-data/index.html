@@ -165,23 +165,32 @@
     <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
         <ul class="nav flex-column">
             
-            <li class="nav-item" data-bs-level="2"><a href="#21-uploading-submitting-data" class="nav-link">2.1 Uploading &amp; Submitting Data</a>
+            <li class="nav-item" data-bs-level="1"><a href="#21-uploading-submitting-data" class="nav-link">2.1 Uploading &amp; Submitting Data</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#211-understanding-data-types-in-orbix" class="nav-link">2.1.1 Understanding Data Types in Orbix</a>
               <ul class="nav flex-column">
               </ul>
             </li>
-            
+            <li class="nav-item" data-bs-level="2"><a href="#212-rt-method-1-batch-upload" class="nav-link">2.1.2 RT Method 1: Batch Upload</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#213-rt-method-2-real-time-upload" class="nav-link">2.1.3 RT Method 2: Real-Time Upload</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
             <li class="nav-item" data-bs-level="2"><a href="#214-non-rt-method-uploading-to-the-compliance-hub" class="nav-link">2.1.4 Non-RT Method: Uploading to the Compliance Hub</a>
               <ul class="nav flex-column">
               </ul>
             </li>
-            
             <li class="nav-item" data-bs-level="2"><a href="#215-editing-uploaded-rt-inspection-data" class="nav-link">2.1.5 Editing Uploaded RT Inspection Data</a>
               <ul class="nav flex-column">
               </ul>
             </li>
-            
             <li class="nav-item" data-bs-level="2"><a href="#216-rt-interoperability-guides-faqs" class="nav-link">2.1.6 RT Interoperability Guides &amp; FAQs</a>
               <ul class="nav flex-column">
+              </ul>
+            </li>
               </ul>
             </li>
         </ul>
@@ -189,9 +198,9 @@
 </div></div>
                     <div class="col-md-9" role="main">
 
-<h2 id="21-uploading-submitting-data"><strong>2.1 Uploading &amp; Submitting Data</strong></h2>
+<h1 id="21-uploading-submitting-data"><strong>2.1 Uploading &amp; Submitting Data</strong></h1>
 <p>The Orbix platform provides clear and flexible workflows for submitting all NDT project data. This section details the primary methods for uploading your inspection information, whether you are submitting Radiographic Testing (RT) data through our structured <strong>DICONDE</strong> workflows or managing other NDT methods and project files through the <strong>Compliance Hub</strong>.</p>
-<h3 id="211-understanding-data-types-in-orbix"><strong>2.1.1 Understanding Data Types in Orbix</strong></h3>
+<h2 id="211-understanding-data-types-in-orbix"><strong>2.1.1 Understanding Data Types in Orbix</strong></h2>
 <p>The Orbix platform is designed to handle various digital inspection workflows. It's key to understand the main data formats and how they are managed within the system.</p>
 <ul>
 <li>
@@ -201,10 +210,10 @@
 <p><strong>Other Supported Formats:</strong> We also support other NDT methods, including VT, UT (HDF5), Eddy Current, and Acoustic Emissions. Data for these methods, along with all standard file formats like PDFs, JPEGs, PNGs, Excel files, .csv files, and TIFs, is uploaded and managed through the <strong>Compliance Hub</strong>.</p>
 </li>
 </ul>
-<p>For detailed instructions on submitting these formats, please see the article: <em>Section 2.1.4 Non-RT Method: Uploading to the Compliance Hub</em>.</p>
-<h3 id="212-rt-method-1-batch-upload"><strong>2.1.2 RT Method 1: Batch Upload</strong></h3>
+<p>For detailed instructions on submitting these formats, please see the article: <a href="./#214-non-rt-method-uploading-to-the-compliance-hub"><em>Section 2.1.4 Non-RT Method: Uploading to the Compliance Hub</em></a>.</p>
+<h2 id="212-rt-method-1-batch-upload"><strong>2.1.2 RT Method 1: Batch Upload</strong></h2>
 <p>The Batch Upload method is ideal for submitting a large volume of inspection data at one time, such as at the end of a shift or a full day's work. This method allows you to upload an entire set of <strong>DICONDE</strong> files along with their corresponding examination report in a single operation.</p>
-<h4 id="2121-critical-preparing-data-for-batch-upload"><strong>2.1.2.1 (CRITICAL) Preparing Data for Batch Upload</strong></h4>
+<h3 id="2121-critical-preparing-data-for-batch-upload"><strong>2.1.2.1 (CRITICAL) Preparing Data for Batch Upload</strong></h3>
 <p>A precise folder structure is <strong>essential</strong> for a successful batch upload. Orbix uses this structure to automatically read and organize your data. Before uploading, arrange your files on your local machine exactly as follows:</p>
 <ol>
 <li>Create a single parent folder (e.g., <code>ProjectName_YYYY-MM-DD</code>). (You can use anyname you like.)</li>
@@ -219,12 +228,12 @@
 └── WELD_002/
     └── Shot_01.dcm
 </code></pre>
-<p>[Screenshot: A diagram or file explorer view illustrating the correct parent folder containing multiple 'Inspection_ID' subfolders, each with .dcm files inside.]</p>
+<p><a class="glightbox" href="../../assets/batch-folder-structure-2.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="batch-folder-structure" src="../../assets/batch-folder-structure-2.png" style="height:300px" /></a></p>
 <p>Adhering to this structure is the most critical step to ensure your data is processed correctly.</p>
-<h4 id="2122-best-practices-for-file-naming"><strong>2.1.2.2 Best Practices for File Naming</strong></h4>
+<h3 id="2122-best-practices-for-file-naming"><strong>2.1.2.2 Best Practices for File Naming</strong></h3>
 <p>While the folder structure is the primary method for organization, consistent file naming is a best practice. If your workflow does not assign specific names, a simple convention like <code>Shot_01.dcm</code>, <code>Shot_02.dcm</code>, etc., within each <strong>Inspection ID</strong> folder is recommended.</p>
 <p>For advanced workflows, Orbix can use the "Trusted Data" option, which relies on the embedded Study, Series, and Instance tags within the <strong>DICONDE</strong> files themselves. However, when in doubt, always default to the <strong>Folder Structure</strong> method.</p>
-<h4 id="2123-step-by-step-guide"><strong>2.1.2.3 Step-by-Step Guide</strong></h4>
+<h3 id="2123-step-by-step-guide"><strong>2.1.2.3 Step-by-Step Guide</strong></h3>
 <p>To perform a batch upload:</p>
 <ol>
 <li>Navigate to the upload screen. You can do this in two ways:<ul>
@@ -234,7 +243,7 @@
 </li>
 <li>You will be directed to the <strong>Batch Upload</strong> page.</li>
 <li>Complete the required fields:<ul>
-<li><strong>Technician:</strong> Select the technician who performed the inspection.</li>
+<li><strong>Interpreter:</strong> Select the technician who performed the inspection.</li>
 <li><strong>Inspection Date:</strong> Select the date from the examination report.</li>
 <li><strong>RT Report:</strong> Drag and drop or browse to upload the corresponding examination report (e.g., PDF).</li>
 <li><strong>Data Template:</strong> Select the option that matches your data preparation.<ul>
@@ -245,14 +254,14 @@
 </ul>
 </li>
 <li>Drag and drop your single parent folder (containing all the <strong>Inspection ID</strong> subfolders) into the designated upload area.</li>
-<li>Click <strong>Submit</strong>. Orbix will begin processing the batch.</li>
+<li>Click <strong>Upload Data</strong>. Orbix will begin processing the batch.</li>
 </ol>
-<p>[Screenshot: The 'Batch Upload' page with fields for Technician, Date, and Data Template highlighted, and an arrow pointing to the drag-and-drop area.]</p>
-<p><strong>Note:</strong> If your total batch upload size exceeds two terabytes (2 TB), you must first compress the parent folder into a single .zip file before uploading.</p>
-<h3 id="213-rt-method-2-real-time-upload"><strong>2.1.3 RT Method 2: Real-Time Upload</strong></h3>
-<h4 id="2131-overview"><strong>2.1.3.1 Overview</strong></h4>
+<p><a class="glightbox" href="../../assets/batch-upload-dashboard.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="batch-upload-dashboard" src="../../assets/batch-upload-dashboard.jpg" style="height:300px" /></a></p>
+<p><strong>Note:</strong> If your total batch upload size exceeds two terabytes (2 TB), you must first compress the parent folder into a single <code>.zip</code> file before uploading.</p>
+<h2 id="213-rt-method-2-real-time-upload"><strong>2.1.3 RT Method 2: Real-Time Upload</strong></h2>
+<h3 id="2131-overview"><strong>2.1.3.1 Overview</strong></h3>
 <p>The Real-Time Upload method is designed for workflows where inspection data must be submitted continuously for immediate review by remote auditors or inspectors. This provides a live feed of inspection progress and allows for rapid feedback cycles. Use this method when immediate submission is required, as opposed to end-of-day batching.</p>
-<h4 id="2132-submitting-data-decisions"><strong>2.1.3.2 Submitting Data &amp; Decisions</strong></h4>
+<h3 id="2132-submitting-data-decisions"><strong>2.1.3.2 Submitting Data &amp; Decisions</strong></h3>
 <p>To submit an inspection in real-time:</p>
 <ol>
 <li>From the <strong>Main Data Manager</strong>, navigate to the <strong>Add Data</strong> screen and select the <strong>Real-Time</strong> tab.</li>
@@ -261,9 +270,9 @@
 <li>Drag and drop the corresponding <strong>DICONDE</strong> file(s) for that <strong>Inspection ID</strong> into the upload area.</li>
 <li>Click <strong>Save and Continue</strong>.</li>
 </ol>
-<p>The inspection is immediately submitted to the system. You can track the status of all submissions (Pending, Accepted, Rejected) in the real-time dashboard. For more information, please see the article: <em>Understanding the Real-Time Submission Dashboard</em>.</p>
-<p>[Screenshot: The 'Real-Time' upload tab, showing fields for Technician, Inspection ID, and the file drop zone.]</p>
-<h4 id="2133-mapping-repairs"><strong>2.1.3.3 Mapping Repairs</strong></h4>
+<p>The inspection is immediately submitted to the system. You can track the status of all submissions (Pending, Accepted, Rejected) in the real-time dashboard. For more information, please see the article: <em>Understanding the Real-Time Submission Dashboard</em></p>
+<p><a class="glightbox" href="../../assets/realTime-upload-dashboard.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="realTime-upload-dashboard" src="../../assets/realTime-upload-dashboard.jpg" style="height:300px" /></a></p>
+<h3 id="2133-mapping-repairs"><strong>2.1.3.3 Mapping Repairs</strong></h3>
 <p>When an inspection is rejected, you must link the new repair data to the original inspection to maintain a complete and traceable record. Orbix provides two methods to accomplish this.</p>
 <p><strong>Method 1: From the Main Data Manager</strong></p>
 <p>Use this method to add repair data to an existing rejected inspection.</p>
@@ -274,7 +283,8 @@
 <li>From the menu, select <strong>Edit Inspection</strong>.</li>
 <li>In the <strong>Edit Inspection</strong> window, drag and drop the new <strong>DICONDE</strong> file for the repair into the designated repair upload box.</li>
 </ol>
-<p>[Screenshot: The 'Edit Inspection' view, highlighting the drag-and-drop area for repair data.]</p>
+<p>[Screenshot: The 'Edit Inspection' view, highlighting the drag-and-drop area for repair data.]
+<a class="glightbox" href="../../assets/edit-inspection-dashboard.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="edit-inspection-dashboard" src="../../assets/edit-inspection-dashboard.png" style="height:300px" /></a></p>
 <p><strong>Method 2: During Real-Time Upload</strong></p>
 <p>Use this method when submitting a new inspection that you know is a repair for a previously rejected item.</p>
 <ol>
@@ -284,11 +294,10 @@
 <li>Select the rejected <strong>Inspection ID</strong> to which this repair corresponds.</li>
 <li>Upload your new inspection data as usual. The link will be created automatically upon submission.</li>
 </ol>
-<p>[Screenshot: The 'Real-Time' upload interface with the 'Repair' dropdown menu expanded to show a list of rejected Inspection IDs.]</p>
-<h2 id="214-non-rt-method-uploading-to-the-compliance-hub">2.1.4 Non-RT Method: Uploading to the Compliance Hub</h2>
-<h3 id="214-non-rt-method-uploading-to-the-compliance-hub_1"><strong>2.1.4 Non-RT Method: Uploading to the Compliance Hub</strong></h3>
+<p><a class="glightbox" href="../../assets/realTime-repair-upload.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="realTime-repair-upload" src="../../assets/realTime-repair-upload.png" style="height:300px" /></a></p>
+<h2 id="214-non-rt-method-uploading-to-the-compliance-hub"><strong>2.1.4 Non-RT Method: Uploading to the Compliance Hub</strong></h2>
 <p>In addition to managing real-time and batch Radiographic Testing (RT) workflows with <strong>DICONDE</strong> files in the <strong>Main Data Manager</strong>, the Orbix platform enables the submission of other NDT methods through the <strong>Compliance Hub</strong>. The <strong>Compliance Hub</strong> is an intelligent repository where your data is mapped directly to your project and the underlying <strong>Inspection ID</strong>. It acts as a centralized hub for all your inspection information, data, and project documentation, providing robust version control, validation, action traceability, and a complete decision history.</p>
-<h4 id="2141-what-its-for"><strong>2.1.4.1 What it's for</strong></h4>
+<h3 id="2141-what-its-for"><strong>2.1.4.1 What it's for</strong></h3>
 <p>The <strong>Compliance Hub</strong> is designed for submitting inspection data and reports for a variety of NDT methods, including:</p>
 <ul>
 <li>Magnetic Particle Testing (MT)</li>
@@ -299,7 +308,7 @@
 <li>Eddy Current Testing (ECT)</li>
 </ul>
 <p>Beyond raw inspection data, the <strong>Compliance Hub</strong> is the designated location for all project documentation. This allows you to store and manage critical files like end-user specifications, service company procedures, personnel qualification records (PQRs), and final examination reports. Each uploaded file is mapped directly to your project, ensuring a complete, traceable, and auditable record.</p>
-<h4 id="2142-accessing-the-compliance-hub"><strong>2.1.4.2 Accessing the Compliance Hub</strong></h4>
+<h3 id="2142-accessing-the-compliance-hub"><strong>2.1.4.2 Accessing the Compliance Hub</strong></h3>
 <p>To navigate to the <strong>Compliance Hub</strong> for your project:</p>
 <ol>
 <li>From the main dashboard, navigate to the <strong>Projects Page</strong>.</li>
@@ -308,12 +317,12 @@
 </ol>
 <p><br></p>
 <blockquote>
-<p><strong>[Screenshot]</strong></p>
+<p><a class="glightbox" href="../../assets/projects-compliance-hub.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="projects-compliance-hub" src="../../assets/projects-compliance-hub.jpg" style="height:300px" /></a></p>
 <p><strong>Image Description:</strong> The <strong>Projects Page</strong> in Orbix. A list of projects is shown in a table. The mouse cursor is highlighting the <strong>Compliance Hub</strong> icon (a stack of papers) in the <strong>Actions</strong> column for a specific project.</p>
 </blockquote>
 <p><br></p>
 <p>This action will open the project-specific <strong>Compliance Hub</strong>, where you can begin managing your files.</p>
-<h4 id="2143-recommended-folder-structure"><strong>2.1.4.3 Recommended Folder Structure</strong></h4>
+<h3 id="2143-recommended-folder-structure"><strong>2.1.4.3 Recommended Folder Structure</strong></h3>
 <p>An organized folder structure is essential for maintaining data integrity and accessibility. You can create folders in a way that best suits your project workflow. For optimal organization, we recommend the following practices:</p>
 <ul>
 <li><strong>Create one folder per NDT Method:</strong> Establish separate folders for MT, PT, UT, etc., to keep inspection data clearly segregated.</li>
@@ -322,11 +331,11 @@
 </ul>
 <p><br></p>
 <blockquote>
-<p><strong>[Screenshot]</strong></p>
+<p><a class="glightbox" href="../../assets/orbix-compliance-hub.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="orbix-compliance-hub" src="../../assets/orbix-compliance-hub.png" style="height:300px" /></a></p>
 <p><strong>Image Description:</strong> The main folder view within the <strong>Compliance Hub</strong>. Several folders are displayed, demonstrating a best-practice structure. Folder names include <code>MT - Magnetic Particle</code>, <code>PT - Penetrant Testing</code>, <code>Procedures</code>, and <code>Specifications</code>. The <strong>New Folder</strong> button is visible in the top right.</p>
 </blockquote>
 <p><br></p>
-<h4 id="2144-step-by-step-uploading-files"><strong>2.1.4.4 Step-by-Step: Uploading Files</strong></h4>
+<h3 id="2144-step-by-step-uploading-files"><strong>2.1.4.4 Step-by-Step: Uploading Files</strong></h3>
 <p>Follow these steps to create folders and upload your inspection files.</p>
 <p><strong>1. Create a Folder:</strong></p>
 <ol>
@@ -339,7 +348,7 @@
 </li>
 <li>Click <strong>Create</strong>.</li>
 </ol>
-<p>[Screenshot: The 'New Folder' dialog box, highlighting the 'Folder Type' dropdown menu which shows 'Inspection Data' and 'Documents and Reports'.]</p>
+<p><a class="glightbox" href="../../assets/new-folder-dialog.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="new-folder-dialog" src="../../assets/new-folder-dialog.jpg" style="height: 300px" /></a></p>
 <p><strong>2. Upload Inspection Files:</strong></p>
 <ol>
 <li>Navigate into the folder you created.</li>
@@ -347,6 +356,7 @@
 </ol>
 <p><strong>3. Manage Uploaded Files:</strong></p>
 <p>Once a file is uploaded, you can access management options by clicking the three-dot icon on the right of the file name.</p>
+<p><a class="glightbox" href="../../assets/compliance-hub-file-options.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="compliance-hub-file-options" src="../../assets/compliance-hub-file-options.jpg" style="height: 300px" /></a></p>
 <p>[Screenshot: A file shown in the Compliance Hub with the three-dot action menu open, highlighting the list of options: Review, Details, Download, Rename, and Edit.]</p>
 <ul>
 <li><strong>Review:</strong> Allows auditors and other stakeholders to provide traceable feedback, flag samples, and agree or disagree with field decisions. All review activity is stored with the data.</li>
@@ -356,10 +366,6 @@
 <li><strong>Edit:</strong> Provides options to modify file information.</li>
 </ul>
 <p>All data within the <strong>Compliance Hub</strong> can be easily downloaded, reviewed, and tracked, providing a complete database of all activity related to your project's inspection data.</p>
-<h3 id="2141-what-its-for_1">2.1.4.1 What it's for</h3>
-<h3 id="2142-accessing-the-compliance-hub_1">2.1.4.2 Accessing the Compliance Hub</h3>
-<h3 id="2143-recommended-folder-structure_1">2.1.4.3 Recommended Folder Structure</h3>
-<h3 id="2144-step-by-step-guide-uploading-files">2.1.4.4 Step-by-Step Guide: Uploading Files</h3>
 <h2 id="215-editing-uploaded-rt-inspection-data">2.1.5 Editing Uploaded RT Inspection Data</h2>
 <h2 id="216-rt-interoperability-guides-faqs">2.1.6 RT Interoperability Guides &amp; FAQs</h2>
 <h3 id="2161-system-specific-guides">2.1.6.1 System-Specific Guides</h3>

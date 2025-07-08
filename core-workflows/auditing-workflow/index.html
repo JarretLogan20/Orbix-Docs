@@ -165,6 +165,31 @@
     <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
         <ul class="nav flex-column">
             
+            <li class="nav-item" data-bs-level="1"><a href="#23-the-auditing-workflow" class="nav-link">2.3 The Auditing Workflow</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#231-an-auditors-role-in-orbix" class="nav-link">2.3.1 An Auditor's Role in Orbix</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#232-method-1-auditing-from-the-main-data-manager" class="nav-link">2.3.2 Method 1: Auditing from the Main Data Manager</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#233-method-2-auditing-from-the-dedicated-auditors-page" class="nav-link">2.3.3 Method 2: Auditing from the Dedicated Auditors Page</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#234-method-3-auditing-via-real-time-alerts" class="nav-link">2.3.4 Method 3: Auditing via Real-Time Alerts</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#235-making-an-audit-decision" class="nav-link">2.3.5 Making an Audit Decision</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            
             <li class="nav-item" data-bs-level="1"><a href="#the-auditing-workflow" class="nav-link">The Auditing Workflow</a>
               <ul class="nav flex-column">
             <li class="nav-item" data-bs-level="2"><a href="#an-auditors-role-in-orbix" class="nav-link">An Auditor's Role in Orbix</a>
@@ -194,6 +219,43 @@
 </div></div>
                     <div class="col-md-9" role="main">
 
+<h1 id="23-the-auditing-workflow">2.3 The Auditing Workflow</h1>
+<p>The auditing workflow is a primary function within the Orbix software. It provides a structured process for auditors to review and make final determinations on radiographic inspections of welds. As technicians complete weld x-rays, the resulting DICONDE files are passed to an auditor who holds the critical responsibility of final approval. Using the RT Viewer and its integrated measurement tools, an auditor interprets the inspection data to decide if a weld meets the required specifications, needs to be re-shot, or requires rework.</p>
+<h2 id="231-an-auditors-role-in-orbix">2.3.1 An Auditor's Role in Orbix</h2>
+<p>The auditor plays one of the most important roles within the Orbix software. They are responsible for making official audit decisions on weld inspections based on the provided radiography specifications. The auditor utilizes the RT Viewer to analyze the DICONDE file for each <code>Inspection ID</code>, using measurement tools to ensure the weld falls within acceptable tolerance ranges. This role is crucial for maintaining project quality and compliance, as the auditor has the final say on whether an inspection passes or fails.</p>
+<h2 id="232-method-1-auditing-from-the-main-data-manager">2.3.2 Method 1: Auditing from the Main Data Manager</h2>
+<p>You can initiate an audit directly from the central data repository.</p>
+<ol>
+<li>Navigate to the <strong>Main Data Manager</strong>.</li>
+<li>From the folder view in the <strong>Compliance Hub</strong>, locate the specific inspection you need to review in the weld list table.</li>
+<li>In the <strong>Action</strong> column corresponding to that <code>Inspection ID</code>, click the <strong>Audit</strong> button.</li>
+</ol>
+<p>[Screenshot: The Main Data Manager weld list table with the "Audit" button highlighted in the action column.]</p>
+<p>Clicking <strong>Audit</strong> will launch the RT Viewer, where you can proceed to analyze the DICONDE file.</p>
+<h2 id="233-method-2-auditing-from-the-dedicated-auditors-page">2.3.3 Method 2: Auditing from the Dedicated Auditors Page</h2>
+<p>Orbix provides a dedicated interface designed specifically for the auditing workflow. This page centralizes all incoming data requiring review.</p>
+<ol>
+<li>From the projects dashboard table, locate the desired project.</li>
+<li>In the <strong>Action</strong> column, click the audit icon (a magnifying glass with a plus symbol).</li>
+</ol>
+<p>This action navigates you to the dedicated auditors page. Here, you will find a feed of inspections ready for audit. This interface allows you to: </p>
+<ul>
+<li>Make audit decisions on individual welds.</li>
+<li>Search for inspections by batch.</li>
+<li>View results from the AI audit, which identifies potentially similar or anomalous joints to assist your review.</li>
+</ul>
+<p>[Screenshot: The dedicated auditors page showing the feed of inspections and search functions.]</p>
+<h2 id="234-method-3-auditing-via-real-time-alerts">2.3.4 Method 3: Auditing via Real-Time Alerts</h2>
+<p>Auditors can also initiate an audit directly from real-time notifications. When a new inspection is ready for review, you may receive an alert. From this notification, you can choose to immediately <strong>Claim</strong> the audit to begin your review or <strong>Pass</strong> it to another auditor.</p>
+<p>(For comprehensive details on setting up and managing notifications, see Section 3.4: Alerts &amp; Notifications).</p>
+<h2 id="235-making-an-audit-decision">2.3.5 Making an Audit Decision</h2>
+<p>After analyzing the inspection in the RT Viewer using the available measurement tools, you will formalize your decision in the <strong>Audit Section</strong> located in the viewer's sidebar.</p>
+<ol>
+<li>Open the <strong>Audit Section</strong>.</li>
+<li>Select <strong>Agree</strong> if the inspection meets all specifications or <strong>Disagree</strong> if it fails.</li>
+<li>You can add detailed notes in the provided text field to justify your decision or provide feedback to the technician.</li>
+</ol>
+<p>(For detailed instructions on using the analysis and measurement tools within the viewer, refer to Section 3.1: The RT Viewer Interface).</p>
 <h1 id="the-auditing-workflow">The Auditing Workflow</h1>
 <h2 id="an-auditors-role-in-orbix">An Auditor's Role in Orbix</h2>
 <h2 id="method-1-auditing-from-the-main-data-manager">Method 1: Auditing from the Main Data Manager</h2>
