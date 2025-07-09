@@ -37,7 +37,7 @@ This action navigates you to the dedicated auditors page. Here, you will find a 
 
 Auditors can also initiate an audit directly from real-time notifications. When a new inspection is ready for review, you may receive an alert. From this notification, you can choose to immediately **Claim** the audit to begin your review or **Pass** it to another auditor.
 
-(For comprehensive details on setting up and managing notifications, see Section 3.4: Alerts & Notifications).
+(For comprehensive details on setting up and managing notifications, see [*Section 3.4: Alerts & Notifications*](../core-tools/alerts-notifications.md)).
 
 ## 2.3.5 Making an Audit Decision
 
@@ -47,7 +47,7 @@ After analyzing the inspection in the RT Viewer using the available measurement 
 2.  Select **Agree** if the inspection meets all specifications or **Disagree** if it fails.
 3.  You can add detailed notes in the provided text field to justify your decision or provide feedback to the technician.
 
-(For detailed instructions on using the analysis and measurement tools within the viewer, refer to Section 3.1: The RT Viewer Interface).
+(For detailed instructions on using the analysis and measurement tools within the viewer, refer to [*Section 3.1: The RT Viewer Interface*](../core-tools/rt-viewer.md)).
 
 # The Auditing Workflow
 
