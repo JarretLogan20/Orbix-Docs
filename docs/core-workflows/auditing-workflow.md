@@ -14,6 +14,8 @@ You can initiate an audit directly from the central data repository.
 2.  From the folder view in the **Compliance Hub**, locate the specific inspection you need to review in the weld list table.
 3.  In the **Action** column corresponding to that `Inspection ID`, click the **Audit** button.
 
+![orbix-audit-main-data-manager](../assets/orbix-audit-main-data-manager.jpg){: style="height: 300px"}
+
 [Screenshot: The Main Data Manager weld list table with the "Audit" button highlighted in the action column.]
 
 Clicking **Audit** will launch the RT Viewer, where you can proceed to analyze the DICONDE file.
@@ -30,6 +32,8 @@ This action navigates you to the dedicated auditors page. Here, you will find a 
 * Make audit decisions on individual welds.
 * Search for inspections by batch.
 * View results from the AI audit, which identifies potentially similar or anomalous joints to assist your review.
+
+![orbix-audit-page](../assets/orbix-audit-page.jpg){: style="height: 200px"} ![orbix-audit-similar-welds](../assets/orbix-audit-similar-welds.jpg){: style="height: 200px"}
 
 [Screenshot: The dedicated auditors page showing the feed of inspections and search functions.]
 
@@ -48,17 +52,4 @@ After analyzing the inspection in the RT Viewer using the available measurement 
 3.  You can add detailed notes in the provided text field to justify your decision or provide feedback to the technician.
 
 (For detailed instructions on using the analysis and measurement tools within the viewer, refer to [*Section 3.1: The RT Viewer Interface*](../core-tools/rt-viewer.md)).
-
-# The Auditing Workflow
-
-## An Auditor's Role in Orbix
-
-## Method 1: Auditing from the Main Data Manager
-
-## Method 2: Auditing from the Dedicated Auditors Page
-
-## Method 3: Auditing via Real-Time Alerts
-
-## Making an Audit Decision
-
 
