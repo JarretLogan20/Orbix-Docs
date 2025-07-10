@@ -175,7 +175,7 @@
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-bs-level="2"><a href="#configuring-project-templates-data-ingestion" class="nav-link">Configuring Project Templates &amp; Data Ingestion</a>
+            <li class="nav-item" data-bs-level="2"><a href="#423-configuring-project-templates-data-ingestion" class="nav-link">4.2.3 Configuring Project Templates &amp; Data Ingestion</a>
               <ul class="nav flex-column">
               </ul>
             </li>
@@ -239,7 +239,49 @@
 <li><strong>To Deactivate a User</strong>: Uncheck the <strong>Active</strong> checkbox. This action makes the user inactive, preventing them from appearing in any Orbix processes. It does not delete their account, and their status can be changed back to active at any time.</li>
 <li><strong>To Delete a User</strong>: Scroll to the bottom of the user's page and click the <strong>Delete</strong> button. This action is permanent and will completely remove the user and their credentials from the system.</li>
 </ul>
-<h2 id="configuring-project-templates-data-ingestion">Configuring Project Templates &amp; Data Ingestion</h2></div>
+<h2 id="423-configuring-project-templates-data-ingestion">4.2.3 Configuring Project Templates &amp; Data Ingestion</h2>
+<p>In the admin panel, a system administrator can configure Project Templates and Data Ingestion settings. These templates are crucial as they define how <strong>Orbix</strong> projects behave when ingesting various types of data from the <strong>Batch Upload and Real-Time Upload</strong>.</p>
+<hr />
+<h3 id="creating-hardware-integration-templates">Creating Hardware Integration Templates</h3>
+<p>Hardware integration templates connect <strong>Orbix</strong> with various acquisition systems and standardize the data upload process.</p>
+<p>To create a new template, navigate to the admin panel and click <strong>Add</strong> next to the <strong>Hardware Integration and Setting</strong> label. This action opens the <strong>Add data template</strong> page.</p>
+<p><a class="glightbox" href="../../assets/orbix-add-template-form.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="orbix-add-template-form" src="../../assets/orbix-add-template-form.jpg" style="height: 300px" /></a></p>
+<p>[Screenshot: The 'Add data template' page with fields highlighted.]</p>
+<p>Complete the following fields to configure the template:</p>
+<p><strong>Required Fields:</strong></p>
+<ul>
+<li><strong>Company:</strong> The company the project belongs to.</li>
+<li><strong>Project:</strong> The specific project where the template will be used.</li>
+<li><strong>Data Upload Type:</strong> Defines the <strong>DICONDE</strong> data rules (see below).</li>
+<li><strong>Select AL Models:</strong> Assigns the relevant AI models for analysis.</li>
+<li><strong>Template Name:</strong> A unique and descriptive name for the template.</li>
+<li><strong>Precision Filter power:</strong> Sets the intensity of the image enhancement filter (1-10).</li>
+</ul>
+<p><strong>Optional Fields:</strong></p>
+<ul>
+<li><strong>Template description:</strong> A brief explanation of the template's purpose.</li>
+<li><strong>Apply Diconde Tags:</strong> When enabled, <strong>DICONDE</strong> tags that you have mapped to this template will be updated in your files upon upload.</li>
+<li><strong>Folder Name as Weld ID:</strong> When enabled, the folder name is automatically used as the <strong>Inspection ID</strong>.</li>
+</ul>
+<p>After filling in the desired fields, select <strong>Save and Continue</strong>. The saved template can now be used for both <strong>Batch</strong> and <strong>Real-time</strong> file uploads.</p>
+<hr />
+<h3 id="configuring-diconde-data-rules">Configuring DICONDE Data Rules</h3>
+<p>When creating a template, you must select a <strong>Data Upload Type</strong>. This setting tells <strong>Orbix</strong> how to interpret the metadata associated with your <strong>DICONDE</strong> files. There are two distinct rules:</p>
+<ul>
+<li><strong>Folder Structure:</strong> Select this option if your metadata is organized within the folder hierarchy. <strong>Orbix</strong> will read the folder structure to interpret the data.</li>
+<li><strong>Trusted Data:</strong> Select this option when the <strong>DICONDE</strong> file itself contains complete and accurate metadata. <strong>Orbix</strong> will trust and read the metadata directly from the file.</li>
+</ul>
+<hr />
+<h3 id="enabling-automatic-inspection-id-generation">Enabling Automatic Inspection ID Generation</h3>
+<p>To streamline data uploads, you can enable automatic <strong>Inspection ID</strong> generation.</p>
+<p>In the template configuration, select the <strong>Folder Name as Weld ID</strong> checkbox. When this feature is active, any batch upload using this template will automatically use the name of the data folder as the <strong>Inspection ID</strong>. This significantly speeds up the upload and audit process in the <strong>Compliance Hub</strong>.</p>
+<p>If this feature is disabled, the <strong>Inspection ID</strong> will not be set automatically during a batch upload. You will need to manually assign an <strong>Inspection ID</strong> to each individual weld later. Maintaining a consistent and logical folder naming convention is critical for leveraging this feature effectively.</p>
+<p><a class="glightbox" href="../../assets/add-template-form-weldID-checkbox.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="add-template-form-weldID-checkbox" src="../../assets/add-template-form-weldID-checkbox.png" style="width: 300px" /></a></p>
+<p>[Screenshot: The 'Folder Name as Weld ID' checkbox within the template settings.]</p>
+<hr />
+<h3 id="enabling-the-precision-filter">Enabling the 'Precision Filter'</h3>
+<p>The <strong>Precision Filter</strong> is an automatic filter in <strong>Orbix</strong> designed to enhance radiographic testing (RT) images. It improves the signal-to-noise ratio, highlights critical features, and facilitates more accurate analysis without compromising the integrity of the original data.</p>
+<p>Within the data template settings, you can set the <strong>Precision Filter power</strong> on a scale from <strong>1 (low)</strong> to <strong>10 (high)</strong>. This value determines the degree of enhancement applied to the RT images. All visual information from the original image is preserved, ensuring that no data is lost during the enhancement process.</p></div>
             </div>
         </div>
 
