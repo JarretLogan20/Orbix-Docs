@@ -187,14 +187,58 @@
                     <div class="col-md-9" role="main">
 
 <h1 id="42-system-administration-the-admin-panel">4.2 System Administration (The Admin Panel)</h1>
+<p>The <strong>Admin Panel</strong> is the central hub for system administrators to manage the Orbix environment for their organization. Within this panel, administrators handle user accounts, manage system-wide permissions and roles, and configure project templates and data ingestion settings.</p>
 <h2 id="421-accessing-the-admin-panel">4.2.1 Accessing the Admin Panel</h2>
-<p><a class="glightbox" href="../../assets/orbix-admin-panel.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="orbix-admin-panel" src="../../assets/orbix-admin-panel.png" style="height:300px" /></a></p>
+<p>Access to the <strong>Admin Panel</strong> is restricted to users with specific permissions.</p>
+<ol>
+<li>To access the panel, your user account must have <strong>Staff Status</strong> permission enabled.</li>
+<li>If you have the correct permission, click on your profile at the bottom of the main navigation menu.</li>
+<li>Select <strong>Admin Panel</strong> from the menu options that appear. You will then be directed to the <strong>Admin Panel</strong> dashboard.</li>
+</ol>
+<p><a class="glightbox" href="../../assets/orbix-navigation-admin-panel.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="orbix-navigation-admin-panel" src="../../assets/orbix-navigation-admin-panel.png" style="height: 300px" /></a></p>
+<p>[Screenshot: The main navigation menu with the user profile clicked, showing the "Admin Panel" option.]</p>
 <h2 id="422-managing-users-permissions">4.2.2 Managing Users &amp; Permissions</h2>
-<ul>
-<li>Creating new user accounts</li>
+<p>From the <strong>Admin Panel</strong> dashboard, administrators can create and manage all user accounts and their associated access levels.</p>
+<p><strong>Creating New User Accounts</strong></p>
+<ol>
+<li>From the <strong>Admin Panel</strong> dashboard, locate the <strong>Users</strong> section and click the <strong>Add</strong> button.</li>
+<li>The <strong>Add User</strong> form will open. Enter the new user's information:<ul>
+<li><strong>Username</strong> (Required; used for signing in)</li>
+<li><strong>Email Address</strong> (Required)</li>
+<li><strong>Name of User</strong> (Required)</li>
+<li><strong>Phone Number</strong> (Optional)</li>
 </ul>
-<iframe src="https://scribehow.com/embed/Add_a_New_User_in_Orbix_NDE_System__IwN1AZvbSuCUqmRLetH90A?as=video" width="100%" height="800" allow="fullscreen" style="aspect-ratio: 16 / 12; border: 0; min-height: 480px"></iframe>
-
+</li>
+<li>Click the <strong>Save and Continue</strong> button. This creates the user's account and immediately takes you to the permissions tab to configure their access.</li>
+</ol>
+<p>After creating the user, you must assign the necessary permissions.</p>
+<ol>
+<li>In the <strong>Permissions</strong> tab for the new user, you can configure their system-wide access. Key permissions include:<ul>
+<li><strong>Active</strong>: Designates whether this user should be treated as active within Orbix. Inactive users do not appear in system processes.</li>
+<li><strong>Staff Status</strong>: Grants the user access to the <strong>Admin Panel</strong>.</li>
+<li><strong>Superuser Status</strong>: Grants the user all permissions without needing to assign them individually.</li>
+</ul>
+</li>
+<li>You can also assign users to pre-defined permission groups (e.g., <strong>Technician</strong>, <strong>Auditor</strong>, <strong>Manager</strong>) or assign specific, individual actions.</li>
+<li>After configuring the user's permissions, you must click the <strong>Email login details</strong> button on their profile. This sends an email to the user with a link to finish setting up their account and create a password.</li>
+</ol>
+<p><a class="glightbox" href="../../assets/orbix-permissions-panel.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="orbix-permissions-panel" src="../../assets/orbix-permissions-panel.png" style="height: 300px" /></a></p>
+<p>[Screenshot: The user permissions tab within the Admin Panel, showing the Active, Staff Status, and Superuser checkboxes.]</p>
+<p><strong>Assigning System-Wide Roles and Permissions</strong></p>
+<p>Administrators can create standardized roles to apply a set of permissions to multiple users quickly.</p>
+<ol>
+<li>From the <strong>Admin Panel</strong> dashboard, navigate to the <strong>Roles</strong> (or Groups) section and click the <strong>Add</strong> button.</li>
+<li>In the <strong>Add Role</strong> form, enter a name for the role (e.g., Technician) and select all the permissions that users with this role should have.</li>
+<li>Click <strong>Save</strong> to create the role. Now you can assign this role to any user.</li>
+<li>To manage existing roles, click the <strong>Manage</strong> button in the <strong>Roles</strong> section. The <strong>Roles Dashboard</strong> allows you to edit permissions, rename, or delete any custom role.</li>
+</ol>
+<p><a class="glightbox" href="../../assets/orbix-roles-panel.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="orbix-roles-panel" src="../../assets/orbix-roles-panel.png" style="height: 300px" /></a></p>
+<p><strong>Deactivating or Deleting Users</strong></p>
+<p>When a user no longer requires access to Orbix, an administrator can either deactivate or permanently delete their account. This is done from the <strong>Permissions</strong> tab on the user's page.</p>
+<ul>
+<li><strong>To Deactivate a User</strong>: Uncheck the <strong>Active</strong> checkbox. This action makes the user inactive, preventing them from appearing in any Orbix processes. It does not delete their account, and their status can be changed back to active at any time.</li>
+<li><strong>To Delete a User</strong>: Scroll to the bottom of the user's page and click the <strong>Delete</strong> button. This action is permanent and will completely remove the user and their credentials from the system.</li>
+</ul>
 <h2 id="configuring-project-templates-data-ingestion">Configuring Project Templates &amp; Data Ingestion</h2></div>
             </div>
         </div>
